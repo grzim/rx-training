@@ -11,8 +11,6 @@ const interval$ = Rx.Observable
     .take(numbersArr.length)
     .timeInterval())
   .log('after flat map')
-  .log();
-
 
 const subscription = numbers$
   .log('number')

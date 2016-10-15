@@ -1,4 +1,4 @@
-import Rx from 'rx';
+import Rx from 'rxjs/Rx';
 
 Rx.Observable.prototype.log = logOperator;
 
