@@ -1,3 +1,5 @@
+import Rx from 'rxjs/Rx';
+
 import _ from "lodash";
 import logOperator from "./logOperator";
 
