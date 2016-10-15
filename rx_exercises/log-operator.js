@@ -8,7 +8,7 @@ function logOperator(indicator = '->'){
     this.subscribe(
       (...values) => {
         console.log(prefix + values);
-        observer.next(values);
+        observer.next(...values);
       },
       error => console.error(error),
       complete => console.log('log complete')

@@ -2,7 +2,7 @@ import Rx from 'rx';
 
 Rx.Observable.prototype.chainOfCommonFilters = chainOfCommonFilters;
 
-function chainOfCommonFilters(fn) {
+function chainOfCommonOperators(fn) {
   return this
     .filter(x => x%2)
     .map(x => x + 2)
@@ -10,7 +10,7 @@ function chainOfCommonFilters(fn) {
 
 const a$ = Rx.Observable.of(1,2,3,4);
 const subscription = a$
-  .chainOfCommonFilters()
+  .chainOfCommonOperators()
   .subscribe(x => console.log(x));
 
 subscription.dispose();
