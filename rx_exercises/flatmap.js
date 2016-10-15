@@ -30,11 +30,10 @@ const subscription = source.subscribe(
 function getWordPromise(){
   return fetch(wordApiUrl)
     .then(
-      response => {
+      response =>
       // Examine the text in the response
-        response.json().then(wordArr => wordArr[0].word)
+       response.json().then(wordArr => wordArr[0].word)
         .catch(err => console.log('Response Error', err))
-      }
     )
     .catch(err => {
       console.log('Fetch Error', err);
