@@ -8,7 +8,7 @@ const interval3$ = Rx.Observable.interval(900).map(x => "third");
 
 const source = interval$
   .merge(interval2$, interval3$)
-  .take(15)
+  .take(15);
 
 
 const subscription = source.subscribe(

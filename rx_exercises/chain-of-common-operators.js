@@ -1,8 +1,8 @@
 import Rx from 'rxjs/Rx';
 
-Rx.Observable.prototype.chainOfCommonFilters = chainOfCommonFilters;
+Rx.Observable.prototype.chainOfCommonOperators = chainOfCommonOperators;
 
-function chainOfCommonOperators(fn) {
+function chainOfCommonOperators() {
   return this
     .filter(x => x%2)
     .map(x => x + 2)
