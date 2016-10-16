@@ -1,6 +1,6 @@
-import Rx from 'rx';
+import Rx from 'rxjs/Rx';
 import _ from "lodash";
-import logOperator from "./../logOperator";
+import logOperator from "./../log-operator";
 
 const flatMapString$ = Rx.Observable
   .of('hello world!')

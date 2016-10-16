@@ -1,6 +1,6 @@
-import Rx from 'rx';
+import Rx from 'rxjs/Rx';
 import _ from "lodash";
-import logOperator from "./../logOperator";
+import logOperator from "./../log-operator";
 
 const wordApiUrl = 'http://api.wordnik.com:80/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5';
 const numberOfWords = 10;

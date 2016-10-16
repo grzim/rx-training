@@ -1,2 +1,2 @@
 import 'babel-polyfill';
-import subscription from "./debounce";
+import subscription from "./merging_streams/merge";
