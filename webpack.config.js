@@ -6,8 +6,8 @@ module.exports = {
 
   entry: {
     //intro: ['./intro_src/main.js'],
-    main: ['./rx_exercises/main.js'],
-    //main: ['./rx_game/main.js']
+    //main: ['./rx_exercises/main.js'],
+    main: ['./rx_game/main.js']
   },
 
   devtool: 'source-map',

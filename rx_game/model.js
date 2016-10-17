@@ -6,16 +6,14 @@ import startState, {
   startInterval
 } from './state';
 import toDispose from './to_dispose';
+import Input from './Input';
 
-// const string$ = new Output();
-// string$.replicate(intent.letter$);
-
-const string$ = new Rx.Subject();
-const interval$ = new Rx.Subject();
-const gameLose$ = new Rx.Subject();
-const gameWon$ = new Rx.Subject();
-const terminateGame$ = new Rx.Subject();
-const startGame$ = new Rx.Subject();
+const string$ = new Input();
+const interval$ = new Input();
+const gameLose$ = new Input();
+const gameWon$ = new Input();
+const terminateGame$ = new Input();
+const startGame$ = new Input();
 
 const subscriptions = toDispose(terminateGame$);
 
@@ -58,11 +56,11 @@ export default {
 
 function observe(intent) {
   subscriptions.push(
-    replicate(intent.letter$, string$),
-    replicate(intent.intervalChange$, interval$),
-    replicate(intent.gameLose$, gameLose$),
-    replicate(intent.gameWon$, gameWon$),
-    replicate(intent.terminateGame$, terminateGame$),
-    replicate(intent.startGameChange$, startGame$)
+    string$.replicate(intent.letter$),
+    interval$.replicate(intent.intervalChange$),
+    gameLose$.replicate(intent.gameLose$),
+    gameWon$.replicate(intent.gameWon$),
+    terminateGame$.replicate(intent.terminateGame$),
+    startGame$.replicate(intent.startGameChange$)
   )
 }
