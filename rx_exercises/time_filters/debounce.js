@@ -3,7 +3,6 @@ import logOperator from './../log-operator'
 
 const numbersArr = [1,2,3,4,5];
 
-
 const interval$ = Rx.Observable
   .from(numbersArr)
   .flatMap(x => {

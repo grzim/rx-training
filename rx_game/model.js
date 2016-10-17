@@ -7,6 +7,9 @@ import startState, {
 } from './state';
 import toDispose from './to_dispose';
 
+// const string$ = new Output();
+// string$.replicate(intent.letter$);
+
 const string$ = new Rx.Subject();
 const interval$ = new Rx.Subject();
 const gameLose$ = new Rx.Subject();

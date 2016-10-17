@@ -1,2 +1,2 @@
 import 'babel-polyfill';
-import subscription from "./merging_streams/merge";
+import subscription from "./time_filters/throttle-key-down";
